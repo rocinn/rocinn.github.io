@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+    <title>Hexo 搭建个人博客（主题 Aomori） | rocinn.site</title>
+
+    <meta name="description" content="&lt;h3 id=&#34;安装-Hexo&#34;&gt;&lt;a href=&#34;#安装-Hexo&#34; class=&#34;headerlink&#34; title=&#34;安装 Hexo&#34;&gt;&lt;/a&gt;&lt;strong&gt;安装 Hexo&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;&lt;a href=&#34;https://hexo.io/zh-cn/docs/index.html&#34;&gt;Hexo 中文文档 https://hexo.io/zh-cn/docs/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;git、nodejs 什么的自行安装不解释&lt;/p&gt;">
+    <meta name="keywords" content="">
+
+    
+
+    <meta property="og:locale" content="cn" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content= "Hexo 搭建个人博客（主题 Aomori） | rocinn.site"  />
+    <meta property="og:description" content= "&lt;h3 id=&#34;安装-Hexo&#34;&gt;&lt;a href=&#34;#安装-Hexo&#34; class=&#34;headerlink&#34; title=&#34;安装 Hexo&#34;&gt;&lt;/a&gt;&lt;strong&gt;安装 Hexo&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;&lt;a href=&#34;https://hexo.io/zh-cn/docs/index.html&#34;&gt;Hexo 中文文档 https://hexo.io/zh-cn/docs/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;git、nodejs 什么的自行安装不解释&lt;/p&gt;" />
+    <meta property="og:url" content="https://rocinn.site/2022/05/13/hexo-build-blog-steps/index.html" />
+    <meta property="og:site_name" content="" />
+    <meta property="article:author" content="John Doe" />
+    <meta property="article:publisher" content="" />
+    <meta property="og:description" content="&lt;h3 id=&#34;安装-Hexo&#34;&gt;&lt;a href=&#34;#安装-Hexo&#34; class=&#34;headerlink&#34; title=&#34;安装 Hexo&#34;&gt;&lt;/a&gt;&lt;strong&gt;安装 Hexo&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;&lt;a href=&#34;https://hexo.io/zh-cn/docs/index.html&#34;&gt;Hexo 中文文档 https://hexo.io/zh-cn/docs/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;git、nodejs 什么的自行安装不解释&lt;/p&gt;" />
+    <meta name="twitter:title" content="Hexo 搭建个人博客（主题 Aomori） | rocinn.site"/>
+    <meta name="twitter:description" content="&lt;h3 id=&#34;安装-Hexo&#34;&gt;&lt;a href=&#34;#安装-Hexo&#34; class=&#34;headerlink&#34; title=&#34;安装 Hexo&#34;&gt;&lt;/a&gt;&lt;strong&gt;安装 Hexo&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;&lt;a href=&#34;https://hexo.io/zh-cn/docs/index.html&#34;&gt;Hexo 中文文档 https://hexo.io/zh-cn/docs/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;git、nodejs 什么的自行安装不解释&lt;/p&gt;"/>
+    <script type="application/ld+json">
+        {
+            "description": "&lt;h3 id=&#34;安装-Hexo&#34;&gt;&lt;a href=&#34;#安装-Hexo&#34; class=&#34;headerlink&#34; title=&#34;安装 Hexo&#34;&gt;&lt;/a&gt;&lt;strong&gt;安装 Hexo&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;&lt;a href=&#34;https://hexo.io/zh-cn/docs/index.html&#34;&gt;Hexo 中文文档 https://hexo.io/zh-cn/docs/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;git、nodejs 什么的自行安装不解释&lt;/p&gt;",
+            "author": { "@type": "Person", "name": "John Doe" },
+            "@type": "BlogPosting",
+            "url": "https://rocinn.site/2022/05/13/hexo-build-blog-steps/index.html",
+            "publisher": {
+            "@type": "Organization",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://rocinn.siteundefined"
+            },
+            "name": "John Doe"
+            },
+            "headline": "Hexo 搭建个人博客（主题 Aomori） | rocinn.site",
+            "datePublished": "2022-05-13T10:44:47.000Z",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://rocinn.site/2022/05/13/hexo-build-blog-steps/index.html"
+            },
+            "@context": "http://schema.org"
+        }
+    </script>
+
+
+
+
+    
+
+    
+    <meta property="algolia:search" data-application-id="KNOHGP4O18" data-api-key="40046ff2cf98d64057b90e6ad7840b03" data-index-name="rocin">
+    
+
+    
+
+    
+
+    
+    <!-- <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/icon-r.png</text></svg>"> -->
+    <link rel="icon" href="https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/icon-r.png">
+    
+
+    
+
+    
+
+    
+<link rel="stylesheet" href="/dist/build.css?v=1651727875408.css">
+
+
+    
+<link rel="stylesheet" href="/dist/custom.css?v=1651727875408.css">
+
+
+    <script>
+        window.isPost = true
+        window.aomori = {
+            
+            
+            
+        }
+        window.aomori_logo_typed_animated = true
+        window.aomori_search_algolia = true
+
+    </script>
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body>
+
+    <div class="container">
+    <header class="header">
+        <div class="header-type">
+            
+            <div class="header-type-inner">
+                
+                    <div id="typed-strings" style="display:none">
+                        <p>rocinn.site</p>
+                    </div>
+                    <a class="header-type-title" id="typed" href="/"></a>
+                
+    
+                
+                    <!-- <span class="header-type-page-title">| John Doe</span> -->
+                
+            </div>
+        </div>
+        <div class="header-menu">
+            <div class="header-menu-inner">
+                
+                <a href="/">主页</a>
+                
+                <a href="/archives">归档</a>
+                
+                <a href="/photography">摄影</a>
+                
+                <a href="/friends">收藏</a>
+                
+            </div>
+            <div class="header-menu-social">
+                
+            </div>
+        </div>
+
+        <div class="header-menu-mobile">
+            <div class="header-menu-mobile-inner" id="mobile-menu-open">
+                <i class="icon icon-menu"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="header-menu-mobile-menu">
+        <div class="header-menu-mobile-menu-bg"></div>
+        <div class="header-menu-mobile-menu-wrap">
+            <div class="header-menu-mobile-menu-inner">
+                <div class="header-menu-mobile-menu-close" id="mobile-menu-close">
+                    <i class="icon icon-cross"></i>
+                </div>
+                <div class="header-menu-mobile-menu-list">
+                    
+                    <a href="/">主页</a>
+                    
+                    <a href="/archives">归档</a>
+                    
+                    <a href="/photography">摄影</a>
+                    
+                    <a href="/friends">收藏</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <div class="container">
+        <div class="main">
+            <section class="inner">
+                <section class="inner-main">
+                    <div class="post">
+    <article id="post-cl3fumokw0005gcg41urcfe0d" class="article article-type-post" itemscope
+    itemprop="blogPost">
+
+    <div class="article-inner">
+
+        
+          
+        
+        
+        
+
+        
+        <header class="article-header">
+            
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo 搭建个人博客（主题 Aomori）
+    </h1>
+  
+
+        </header>
+        
+
+        
+          <div>
+            <span class="leancloud_visitors" data-flag-title=" Hexo 搭建个人博客（主题 Aomori）">
+              <!-- Visited:
+              <a href="#"><span class="leancloud-visitors-count"></span>次</a> -->
+            </span>
+          </div>
+          
+
+        <div class="article-more-info article-more-info-post hairline">
+
+            <div class="article-date">
+  <time datetime="2022-05-13T10:44:47.000Z" itemprop="datePublished">2022-05-13</time>
+</div>
+            <div class="leancloud-visitors-count article-date"></div>
+            
+
+            
+            <div class="article-tag">
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+            </div>
+            
+
+            
+
+        </div>
+
+        <div class="article-entry post-inner-html hairline" itemprop="articleBody">
+            <h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a><strong>安装 Hexo</strong></h3><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/index.html">Hexo 中文文档 https://hexo.io/zh-cn/docs/index.html</a></p>
+<p>git、nodejs 什么的自行安装不解释</p>
+<span id="more"></span>
+<pre><code># npm 安装 Hexo 脚手架
+npm install hexo-cli -g
+
+# 初始化 博客 默认模板
+hexo init blog
+cd blog
+
+# 安装依赖
+npm install
+
+# 本地运行
+hexo server
+
+# 生成静态文件到public文件夹，可以用于部署到服务器上，比如我是windows服务器，在IIS下新建网站
+hexo generate
+</code></pre>
+<p>以下两步通过ftp部署，暂未实验成功😂，deploy各种报错……，目前手动复制public内文件至服务器</p>
+<pre><code># 由于我使用的是阿里云虚拟主机（windows版），自带ftp，所以我可以通过ftp发布，需要安装
+npm install hexo-deployer-ftpsync --save
+
+# 发布，需要按需要配置 _config.yml 下 deploy节点
+hexo deploy
+</code></pre>
+<h3 id="修改-aomori-主题代码"><a href="#修改-aomori-主题代码" class="headerlink" title="修改 aomori 主题代码"></a><strong>修改 aomori 主题代码</strong></h3><ul>
+<li><p>移除文章内twitter、facebook分享<br><img src="https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/hexo-build-blog-steps-%E7%A7%BB%E9%99%A4%E6%96%87%E7%AB%A0%E5%86%85twitter%E3%80%81facebook%E5%88%86%E4%BA%AB.png"></p>
+</li>
+<li><p>网站底部增加备案号<br><img src="https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/hexo-build-blog-steps-%E5%A4%87%E6%A1%88%E5%8F%B7%E9%85%8D%E7%BD%AE.png"><br><img src="https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/hexo-build-blog-steps-%E5%A4%87%E6%A1%88%E5%8F%B7%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%A0%81.png"></p>
+</li>
+<li><p>可配置 giscus 评论框位置<br><img src="https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/hexo-build-blog-steps-%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98%E4%BB%A3%E7%A0%81-%E5%8F%AF%E9%85%8D%E7%BD%AEgiscus%E8%AF%84%E8%AE%BA%E6%A1%86%E4%BD%8D%E7%BD%AE.png"></p>
+</li>
+</ul>
+<h3 id="配置-giscus-评论插件"><a href="#配置-giscus-评论插件" class="headerlink" title="配置 giscus 评论插件"></a><strong>配置 giscus 评论插件</strong></h3><p>giscus文档 <a target="_blank" rel="noopener" href="https://giscus.app/zh-CN">https://giscus.app/zh-CN</a><br>主题原作者的配置文档 <a target="_blank" rel="noopener" href="https://aomori.linhong.me/v/chinese/features/comment">https://aomori.linhong.me/v/chinese/features/comment</a><br><img src="https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/hexo-build-blog-steps-giscus-%E9%85%8D%E7%BD%AE001.png"><br><img src="https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/hexo-build-blog-steps-giscus-%E9%85%8D%E7%BD%AE002.png"><br><img src="https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/hexo-build-blog-steps-giscus-%E9%85%8D%E7%BD%AE003.png"><br><img src="https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/hexo-build-blog-steps-giscus-%E9%85%8D%E7%BD%AE004.png"><br><img src="https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/hexo-build-blog-steps-giscus-%E9%85%8D%E7%BD%AE005.png"></p>
+<h3 id="aomori-主题支持显示阅读量，-借助-leancloud"><a href="#aomori-主题支持显示阅读量，-借助-leancloud" class="headerlink" title="aomori 主题支持显示阅读量， 借助 leancloud"></a><strong>aomori 主题支持显示阅读量， 借助 leancloud</strong></h3><p>leancloud官网 <a target="_blank" rel="noopener" href="https://leancloud.cn/">https://leancloud.cn/</a><br><img src="https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/hexo-build-blog-steps-hexo-aomori%E4%B8%BB%E9%A2%98%E5%A2%9E%E5%8A%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E9%85%8D%E7%BD%AE.png"><br><img src="https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/hexo-build-blog-steps-hexo-aomori%E4%B8%BB%E9%A2%98%E5%A2%9E%E5%8A%A0%E9%98%85%E8%AF%BB%E9%87%8F-%E6%96%87%E7%AB%A0%E5%86%85%E6%98%BE%E7%A4%BA.png"><br><img src="https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/hexo-build-blog-steps-hexo-aomori%E4%B8%BB%E9%A2%98%E5%A2%9E%E5%8A%A0%E9%98%85%E8%AF%BB%E9%87%8F-%E4%BB%A3%E7%A0%81.png"><br><img src="https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/hexo-build-blog-steps-hexo-aomori%E4%B8%BB%E9%A2%98%E5%A2%9E%E5%8A%A0%E9%98%85%E8%AF%BB%E9%87%8F-leancloud%E6%96%B0%E5%A2%9E%E8%A1%A8.png"><br><img src="https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/hexo-build-blog-steps-hexo-aomori%E4%B8%BB%E9%A2%98%E5%A2%9E%E5%8A%A0%E9%98%85%E8%AF%BB%E9%87%8F-leancloud%E6%96%B0%E5%A2%9E%E8%A1%A82.png"><br><img src="https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/hexo-build-blog-steps-hexo-aomori%E4%B8%BB%E9%A2%98%E5%A2%9E%E5%8A%A0%E9%98%85%E8%AF%BB%E9%87%8F-leancloud%E5%BA%94%E7%94%A8%E5%87%AD%E8%AF%81.png"><br><img src="https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/hexo-build-blog-steps-hexo-aomori%E4%B8%BB%E9%A2%98%E5%A2%9E%E5%8A%A0%E9%98%85%E8%AF%BB%E9%87%8F-leancloud%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A.png"><br><img src="https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/hexo-build-blog-steps-hexo-aomori%E4%B8%BB%E9%A2%98%E5%A2%9E%E5%8A%A0%E9%98%85%E8%AF%BB%E9%87%8F-leancloud%E5%AE%89%E5%85%A8%E4%B8%AD%E5%BF%83%E7%99%BD%E5%90%8D%E5%8D%95%E9%85%8D%E7%BD%AE.png"></p>
+<p>footer.ejs 中的代码，借鉴别人的代码，做了调整<br>源1：<a target="_blank" rel="noopener" href="https://priesttomb.github.io/%E6%97%A5%E5%B8%B8/2017/11/06/jekyll%E4%BD%BF%E7%94%A8LeanCloud%E8%AE%B0%E5%BD%95%E6%96%87%E7%AB%A0%E7%9A%84%E8%AE%BF%E9%97%AE%E6%AC%A1%E6%95%B0/">jekyll使用LeanCloud记录文章的访问次数</a><br>源2：<a target="_blank" rel="noopener" href="https://blog.whuzfb.cn/blog/2019/01/05/blog_reading_counter/">晨曦添加阅读量统计</a></p>
+<pre><code>&lt;!-- 以下时访客统计 --&gt;
+&lt;% if (config.leancloud.enable) &#123; %&gt;
+  &lt;!-- // 获取IP --&gt;
+  &lt;script src=&quot;https://pv.sohu.com/cityjson?ie=utf-8&quot;&gt;&lt;/script&gt;
+
+  &lt;script src=&quot;https://code.jquery.com/jquery-3.2.0.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://unpkg.com/leancloud-storage@4.12.2/dist/av-min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    // const AV = require(&#39;leancloud-storage&#39;);
+    AV.init(&#123;
+      appId: &#39;&lt;%= config.leancloud.app_id %&gt;&#39;,
+      appKey: &#39;&lt;%= config.leancloud.app_key %&gt;&#39;,
+      serverURL: &#39;&lt;%= config.leancloud.serverURL %&gt;&#39;
+    &#125;);
+   
+//新增访问次数
+function addCount(Counter) &#123;
+      // 页面（博客文章）中的信息：leancloud_visitors
+      // id为page.url， data-flag-title为page.title
+      var $visitors = $(&quot;.leancloud_visitors&quot;);
+      // var url = $visitors.attr(&#39;id&#39;).trim();
+      var url = window.location.pathname;
+      var title = $visitors.attr(&#39;data-flag-title&#39;).trim();
+      var query = new AV.Query(Counter);
+
+      // 只根据文章的url查询LeanCloud服务器中的数据
+      query.equalTo(&quot;post_url&quot;, url);
+      query.find().then(function(results)&#123;
+          if (results.length &gt; 0) &#123;//说明LeanCloud中已经记录了这篇文章
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment(&quot;visited_times&quot;);// 将点击次数加1
+            counter.save().then(function(counter)&#123;
+                var newTimes = counter.get(&#39;visited_times&#39;);
+                $(&#39;.leancloud-visitors-count&#39;).text(newTimes+&quot;阅读&quot;);
+              &#125;,
+              function(counter, error) &#123;
+                console.log(&#39;Failed to save Visitor num, with error message: &#39; + error.message);
+              &#125;
+            );
+          &#125; else &#123;
+            // 执行这里，说明LeanCloud中还没有记录此文章
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set(&quot;post_title&quot;, title);// 把文章标题
+            newcounter.set(&quot;post_url&quot;, url); // 文章url
+            newcounter.set(&quot;visited_times&quot;, 1); // 初始点击次数：1次
+            newcounter.save().then(function(newcounter)&#123; // 上传到LeanCloud服务器中
+                var newTimes = newcounter.get(&#39;visited_times&#39;);
+                $(&#39;.leancloud-visitors-count&#39;).text(newTimes+&quot;阅读&quot;);
+              &#125;,
+               function(newcounter, error) &#123;
+                console.log(&#39;Failed to create&#39;);
+              &#125;
+            );
+          &#125;
+        &#125;,
+         function(error) &#123;
+          console.log(&#39;Error:&#39; + error.code + &quot; &quot; + error.message);
+        &#125;
+      );
+    &#125;
+
+    //仅根据url和title查出当前访问次数，不做+1操作
+    function showCount(Counter) &#123;
+      var $visitors = $(&quot;.leancloud_visitors&quot;);
+      // var url = $visitors.attr(&#39;id&#39;).trim();
+      var url = window.location.pathname;
+      var title = $visitors.attr(&#39;data-flag-title&#39;).trim();
+      var query = new AV.Query(Counter);
+
+      // 只根据文章的url查询LeanCloud服务器中的数据
+      query.equalTo(&quot;post_url&quot;, url);
+      query.find().then(function(results)&#123;
+          if (results.length &gt; 0) &#123;//说明LeanCloud中已经记录了这篇文章
+            var counter = results[0];
+            var newTimes = counter.get(&#39;visited_times&#39;);
+            $(&#39;.leancloud-visitors-count&#39;).text(newTimes+&quot;阅读&quot;);
+          &#125; else &#123;
+            //如果表里没查到记录，那就是异常情况了
+            console.log(&#39;异常情况，不应该没记录的&#39;);
+          &#125;
+        &#125;,
+        function(error) &#123;
+          console.log(&#39;Error:&#39; + error.code + &quot; &quot; + error.message);
+        &#125;
+      );
+    &#125;
+
+    //判断访客是否已访问过该文章，及访问时间，符合条件则增加一次访问次数
+    function judgeVisitor(ip) &#123;
+    // console.log(&quot;ip&quot;, ip)
+      var Counter = AV.Object.extend(&quot;visited_times&quot;);
+      var Visitor = AV.Object.extend(&quot;visitors_record&quot;);
+
+      var $postInfo = $(&quot;.leancloud_visitors&quot;);
+      // var post_url = $postInfo.attr(&#39;id&#39;).trim();
+      var post_url = window.location.pathname;
+      var query = new AV.Query(Visitor);
+
+      query.equalTo(&quot;visitor_ip&quot;, ip);
+      query.equalTo(&quot;post_url&quot;, post_url);
+      query.find().then(function(results)&#123;
+          if (results.length &gt; 0) &#123;
+            // console.log(&#39;该IP已访问过该文章&#39;);
+
+            var oldVisitor = results[0];
+
+            var lastTime = oldVisitor.updatedAt;
+            var curTime = new Date();
+
+            var timePassed = curTime.getTime() - lastTime.getTime();
+
+            if(timePassed &gt; 1 * 60 * 1000) &#123;
+              // console.log(&#39;距离该IP上一次访问该文章已超过了1分钟，更新访问记录，并增加访问次数&#39;);
+
+              addCount(Counter);
+
+              oldVisitor.fetchWhenSave(true);
+              oldVisitor.save(null, &#123;
+                success: function(oldVisitor) &#123; &#125;,
+                error: function(oldVisitor, error) &#123;
+                  console.log(&#39;Failed to save visitor record, with error message: &#39; + error.message);
+                &#125;
+              &#125;);
+            &#125; else &#123;
+              // console.log(&#39;这是该IP 1分钟内重复访问该文章，不更新访问记录，不增加访问次数&#39;);
+              showCount(Counter);
+            &#125;
+          &#125; else &#123;
+            // console.log(&#39;该IP第一次访问该文章，保存新的访问记录，并增加访问次数&#39;);
+
+            addCount(Counter);
+
+            var newVisitor = new Visitor();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newVisitor.setACL(acl);
+            newVisitor.set(&quot;visitor_ip&quot;, ip);
+            newVisitor.set(&quot;post_url&quot;, post_url);
+            newVisitor.save(null, &#123; // 上传到LeanCloud服务器中
+              success: function(newVisitor) &#123; &#125;,
+              error: function(newVisitor, error) &#123;
+                console.log(&#39;Failed to create visitor record, with error message: &#39; + error.message);
+              &#125;
+            &#125;);
+          &#125;
+        &#125;,
+         function(error) &#123;
+          console.log(&#39;Error:&#39; + error.code + &quot; &quot; + error.message);
+          addCount(Counter);
+        &#125;
+      );
+    &#125;
+
+    $(function() &#123;
+      if ($(&#39;.leancloud_visitors&#39;).length == 1) &#123;
+        // 文章页面，调用判断方法，对符合条件的访问增加访问次数
+        judgeVisitor(returnCitySN.cip)
+      &#125; else if ($(&#39;.post-link&#39;).length &gt; 1)&#123;
+        // 首页 暂未使用
+        // showHitCount(Counter);
+      &#125;
+    &#125;);
+  &lt;/script&gt;
+&lt;% &#125; %&gt;
+</code></pre>
+
+        </div>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+  <div class="article-copyright hairline">
+    <p>
+      本作品采用  <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 (CC BY-NC-ND 4.0)</a> 进行许可。
+    </p>
+  </div>
+  
+
+    
+
+    
+<nav class="article-nav">
+  
+    <a href="/2022/05/15/aboutme/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-caption">下一篇</div>
+      <div class="article-nav-title">
+        
+          关于博客主
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+    <!-- <section class="share">
+        <div class="share-title">分享</div>
+        <a class="share-item" target="_blank"
+            href="https://twitter.com/share?text=Hexo 搭建个人博客（主题 Aomori） - rocinn.site&url=https%3A%2F%2Frocinn.site%2F2022%2F05%2F13%2Fhexo-build-blog-steps%2F">
+            <box-icon type='logo' name='twitter'></box-icon>
+        </a>
+        <a class="share-item" target="_blank"
+            href="https://www.facebook.com/sharer.php?title=Hexo 搭建个人博客（主题 Aomori） - rocinn.site&u=https%3A%2F%2Frocinn.site%2F2022%2F05%2F13%2Fhexo-build-blog-steps%2F">
+            <box-icon name='facebook-square' type='logo' ></box-icon>
+        </a>
+
+    </section> -->
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="comments">
+    <div class="giscus"></div>
+</section>
+<script src="https://giscus.app/client.js"
+    data-repo="rocinn/rocinn.github.io"
+    data-repo-id="R_kgDOHXLpeQ"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOHXLpec4CPL7b"
+    data-mapping="pathname"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-theme="light"
+    data-lang="zh-CN"
+    data-input-position="top"
+    crossorigin="anonymous"
+    async>
+</script>
+
+
+
+
+
+  <link rel="icon" href="https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/icon-r.png">
+
+
+
+</div>
+                </section>
+            </section>
+
+            
+            <aside class="sidebar sidebar-search-fix">
+                
+
+    <div class="search">
+    <div class="has-icon-right">
+        <input type="text" class="form-input" id="search" placeholder="SEARCH" autocomplete="off">
+        <div class="form-icon">
+            <box-icon name='search' color="#3c4859"></box-icon>
+        </div>
+    </div>
+    <div class="search-result" id="search-ps"></div>
+</div>
+
+
+<div class="widget" id="widget">
+    
+      
+  <div class="widget-wrap">
+    <div class="widget-inner">
+      <div class="toc post-toc-html"></div>
+    </div>
+  </div>
+
+    
+      
+
+    
+      
+  <div class="widget-wrap widget-tags">
+    <div class="widget-title"><span>Tags</span></div>
+    <div class="widget-inner">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cors/" rel="tag">cors</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webapi/" rel="tag">webapi</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-recent-posts">
+    <div class="widget-title"><span>Recent Posts</span></div>
+    <div class="widget-inner">
+      <ul>
+        
+          <li>
+            <a href="/2022/05/20/dotnetwebapicors/">.net c# webapi 设置允许跨域</a>
+          </li>
+        
+          <li>
+            <a href="/2022/05/15/aboutme/">关于博客主</a>
+          </li>
+        
+          <li>
+            <a href="/2022/05/13/hexo-build-blog-steps/">Hexo 搭建个人博客（主题 Aomori）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap widget-archive">
+    <div class="widget-title"><span>Archive</span></div>
+    <div class="widget-inner">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a></li></ul>
+    </div>
+  </div>
+
+
+    
+</div>
+
+<div id="backtop"><i class="icon icon-arrow-up"></i></div>
+            </aside>
+            
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="footer-wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3c4859" fill-opacity="1" d="M0,160L60,181.3C120,203,240,245,360,240C480,235,600,181,720,186.7C840,192,960,256,1080,261.3C1200,267,1320,213,1380,186.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+    </div>
+
+    <!-- Please do not remove this -->
+    <!-- 开源不易，请勿删除 -->
+    <div class="footer-wrap">
+        <div class="footer-inner"> 
+            rocinn.site &copy; 2022<br>
+            Powered By Hexo · Theme By <a href="https://linhong.me/" target="_blank">Aomori</a> · <a href="https://github.com/lh1me/hexo-theme-aomori" target="_blank">Github</a><br>
+            
+        </div>
+    </div>
+
+</footer>
+
+
+
+
+
+
+<script src="/dist/build.js?1651727875408.js"></script>
+
+
+<script src="/dist/custom.js?1651727875408.js"></script>
+
+
+
+<!-- 百度链接提交 -->
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 以下时访客统计 -->
+
+  <!-- // 获取IP -->
+  <!-- <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script> -->
+
+  <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+  <script src="https://unpkg.com/leancloud-storage@4.12.2/dist/av-min.js"></script>
+  <script>
+    var m_current_pathname = window.location.pathname;
+    // const AV = require('leancloud-storage');
+    AV.init({
+      appId: '1l6UjGL3qBqg9E7qtK1zdzY3-gzGzoHsz',
+      appKey: '07bxY5wtFB85iUzDMcqTElaz',
+      serverURL: 'https://1l6ujgl3.lc-cn-n1-shared.com'
+    });
+   
+    //新增访问次数
+    function addCount(Counter) {
+      // 页面（博客文章）中的信息：leancloud_visitors
+      //  data-flag-title为page.title
+      var $visitors = $(".leancloud_visitors");
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      // 只根据文章的url查询LeanCloud服务器中的数据
+      query.equalTo("post_url", m_current_pathname);
+      query.find().then(function(results){
+          if (results.length > 0) {//说明LeanCloud中已经记录了这篇文章
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("visited_times");// 将点击次数加1
+            counter.save().then(function(counter){
+                var newTimes = counter.get('visited_times');
+                $('.leancloud-visitors-count').text(newTimes+"阅读");
+              },
+              function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            );
+          } else {
+            // 执行这里，说明LeanCloud中还没有记录此文章
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("post_title", title);// 把文章标题
+            newcounter.set("post_url", m_current_pathname); // 文章url
+            newcounter.set("visited_times", 1); // 初始点击次数：1次
+            newcounter.save().then(function(newcounter){ // 上传到LeanCloud服务器中
+                var newTimes = newcounter.get('visited_times');
+                $('.leancloud-visitors-count').text(newTimes+"阅读");
+              },
+               function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            );
+          }
+        },
+         function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      );
+    }
+
+    //仅根据url和title查出当前访问次数，不做+1操作
+    function showCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      // 只根据文章的url查询LeanCloud服务器中的数据
+      query.equalTo("post_url", m_current_pathname);
+      query.find().then(function(results){
+          if (results.length > 0) {//说明LeanCloud中已经记录了这篇文章
+            var counter = results[0];
+            var newTimes = counter.get('visited_times');
+            $('.leancloud-visitors-count').text(newTimes+"阅读");
+          } else {
+            //如果表里没查到记录，那就是异常情况了
+            console.log('异常情况，不应该没记录的');
+          }
+        },
+        function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      );
+    }
+
+    //判断访客是否已访问过该文章，及访问时间，符合条件则增加一次访问次数
+    function judgeVisitor(ip, city) {
+    // console.log("ip", ip)
+      var Counter = AV.Object.extend("visited_times");
+      var Visitor = AV.Object.extend("visitors_record");
+
+      var $postInfo = $(".leancloud_visitors");
+      var query = new AV.Query(Visitor);
+
+      query.equalTo("visitor_ip", ip);
+      query.equalTo("post_url", m_current_pathname);
+      query.find().then(function(results){
+          if (results.length > 0) {
+            // console.log('该IP已访问过该文章');
+
+            var oldVisitor = results[0];
+
+            var lastTime = oldVisitor.updatedAt;
+            var curTime = new Date();
+
+            var timePassed = curTime.getTime() - lastTime.getTime();
+
+            if(timePassed > 5 * 60 * 1000) {
+              // console.log('距离该IP上一次访问该文章已超过了5分钟，更新访问记录，并增加访问次数');
+
+              addCount(Counter);
+
+              oldVisitor.fetchWhenSave(true);
+              oldVisitor.save(null, {
+                success: function(oldVisitor) { },
+                error: function(oldVisitor, error) {
+                  console.log('Failed to save visitor record, with error message: ' + error.message);
+                }
+              });
+            } else {
+              // console.log('这是该IP 1分钟内重复访问该文章，不更新访问记录，不增加访问次数');
+              showCount(Counter);
+            }
+          } else {
+            // console.log('该IP第一次访问该文章，保存新的访问记录，并增加访问次数');
+
+            addCount(Counter);
+
+            var newVisitor = new Visitor();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newVisitor.setACL(acl);
+            newVisitor.set("visitor_ip", ip);
+            newVisitor.set("visitor_city", city);
+            newVisitor.set("post_url", m_current_pathname);
+            newVisitor.save(null, { // 上传到LeanCloud服务器中
+              success: function(newVisitor) { },
+              error: function(newVisitor, error) {
+                console.log('Failed to create visitor record, with error message: ' + error.message);
+              }
+            });
+          }
+        },
+         function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+          addCount(Counter);
+        }
+      );
+    }
+
+    $(function() {
+      if ($('.leancloud_visitors').length == 1) {
+        // 文章页面，调用判断方法，对符合条件的访问增加访问次数
+
+        var ip;
+        var city;
+        var options = {
+          type: 'get',
+          //async: false, //jquery3中可以直接使用回调函数，不用再指定async
+          url: "https://yzj.suijitask.cn/ip"
+        };
+        $.ajax(options)
+        .done(function(data, textStatus, jqXHR) {
+          if(textStatus == "success") {
+            ip = data.cip;
+            city = data.cname;
+          }
+          judgeVisitor(ip, city)
+        });
+
+      }
+    });
+  </script>
+
+
+
+</body>
+
+</html>

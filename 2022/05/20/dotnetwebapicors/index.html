@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+    <title>.net c# webapi 设置允许跨域 | rocinn.site</title>
+
+    <meta name="description" content="可针对 全局、控制器、接口 设置">
+    <meta name="keywords" content="">
+
+    
+
+    <meta property="og:locale" content="cn" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content= ".net c# webapi 设置允许跨域 | rocinn.site"  />
+    <meta property="og:description" content= "可针对 全局、控制器、接口 设置" />
+    <meta property="og:url" content="https://rocinn.site/2022/05/20/dotnetwebapicors/index.html" />
+    <meta property="og:site_name" content="" />
+    <meta property="article:author" content="John Doe" />
+    <meta property="article:publisher" content="" />
+    <meta property="og:description" content="可针对 全局、控制器、接口 设置" />
+    <meta name="twitter:title" content=".net c# webapi 设置允许跨域 | rocinn.site"/>
+    <meta name="twitter:description" content="可针对 全局、控制器、接口 设置"/>
+    <script type="application/ld+json">
+        {
+            "description": "可针对 全局、控制器、接口 设置",
+            "author": { "@type": "Person", "name": "John Doe" },
+            "@type": "BlogPosting",
+            "url": "https://rocinn.site/2022/05/20/dotnetwebapicors/index.html",
+            "publisher": {
+            "@type": "Organization",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://rocinn.siteundefined"
+            },
+            "name": "John Doe"
+            },
+            "headline": ".net c# webapi 设置允许跨域 | rocinn.site",
+            "datePublished": "2022-05-20T11:38:15.000Z",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://rocinn.site/2022/05/20/dotnetwebapicors/index.html"
+            },
+            "@context": "http://schema.org"
+        }
+    </script>
+
+
+
+
+    
+
+    
+    <meta property="algolia:search" data-application-id="KNOHGP4O18" data-api-key="40046ff2cf98d64057b90e6ad7840b03" data-index-name="rocin">
+    
+
+    
+
+    
+
+    
+    <!-- <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/icon-r.png</text></svg>"> -->
+    <link rel="icon" href="https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/icon-r.png">
+    
+
+    
+
+    
+
+    
+<link rel="stylesheet" href="/dist/build.css?v=1651727875408.css">
+
+
+    
+<link rel="stylesheet" href="/dist/custom.css?v=1651727875408.css">
+
+
+    <script>
+        window.isPost = true
+        window.aomori = {
+            
+            
+            
+        }
+        window.aomori_logo_typed_animated = true
+        window.aomori_search_algolia = true
+
+    </script>
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body>
+
+    <div class="container">
+    <header class="header">
+        <div class="header-type">
+            
+            <div class="header-type-inner">
+                
+                    <div id="typed-strings" style="display:none">
+                        <p>rocinn.site</p>
+                    </div>
+                    <a class="header-type-title" id="typed" href="/"></a>
+                
+    
+                
+                    <!-- <span class="header-type-page-title">| John Doe</span> -->
+                
+            </div>
+        </div>
+        <div class="header-menu">
+            <div class="header-menu-inner">
+                
+                <a href="/">主页</a>
+                
+                <a href="/archives">归档</a>
+                
+                <a href="/photography">摄影</a>
+                
+                <a href="/friends">收藏</a>
+                
+            </div>
+            <div class="header-menu-social">
+                
+            </div>
+        </div>
+
+        <div class="header-menu-mobile">
+            <div class="header-menu-mobile-inner" id="mobile-menu-open">
+                <i class="icon icon-menu"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="header-menu-mobile-menu">
+        <div class="header-menu-mobile-menu-bg"></div>
+        <div class="header-menu-mobile-menu-wrap">
+            <div class="header-menu-mobile-menu-inner">
+                <div class="header-menu-mobile-menu-close" id="mobile-menu-close">
+                    <i class="icon icon-cross"></i>
+                </div>
+                <div class="header-menu-mobile-menu-list">
+                    
+                    <a href="/">主页</a>
+                    
+                    <a href="/archives">归档</a>
+                    
+                    <a href="/photography">摄影</a>
+                    
+                    <a href="/friends">收藏</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <div class="container">
+        <div class="main">
+            <section class="inner">
+                <section class="inner-main">
+                    <div class="post">
+    <article id="post-cl3fumokj0001gcg4ai3ab5sd" class="article article-type-post" itemscope
+    itemprop="blogPost">
+
+    <div class="article-inner">
+
+        
+          
+        
+        
+        
+
+        
+        <header class="article-header">
+            
+  
+    <h1 class="article-title" itemprop="name">
+      .net c# webapi 设置允许跨域
+    </h1>
+  
+
+        </header>
+        
+
+        
+          <div>
+            <span class="leancloud_visitors" data-flag-title=" .net c# webapi 设置允许跨域">
+              <!-- Visited:
+              <a href="#"><span class="leancloud-visitors-count"></span>次</a> -->
+            </span>
+          </div>
+          
+
+        <div class="article-more-info article-more-info-post hairline">
+
+            <div class="article-date">
+  <time datetime="2022-05-20T11:38:15.000Z" itemprop="datePublished">2022-05-20</time>
+</div>
+            <div class="leancloud-visitors-count article-date"></div>
+            
+
+            
+            <div class="article-tag">
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/" rel="tag">c#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cors/" rel="tag">cors</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webapi/" rel="tag">webapi</a></li></ul>
+            </div>
+            
+
+            
+
+        </div>
+
+        <div class="article-entry post-inner-html hairline" itemprop="articleBody">
+            <p>chrome console error</p>
+<pre><code>Access to XMLHttpRequest at &#39;https://yzj.suijitask.cn/ip&#39; from origin &#39;http://localhost:4000&#39; has been blocked by CORS policy: No &#39;Access-Control-Allow-Origin&#39; header is present on the requested resource.
+</code></pre>
+<h3 id="全局设置跨域"><a href="#全局设置跨域" class="headerlink" title="全局设置跨域"></a><strong>全局设置跨域</strong></h3><pre><code>public static class WebApiConfig
+&#123;
+    public static void Register(HttpConfiguration config)
+    &#123;
+        // Web API 配置和服务
+        // 不限制域名
+        config.EnableCors(new EnableCorsAttribute(&quot;*&quot;, &quot;*&quot;, &quot;*&quot;));
+        // 针对域名设置，逗号隔开
+        config.EnableCors(new EnableCorsAttribute(&quot;https://rocinn.github.io,http://localhost:4000&quot;, &quot;*&quot;, &quot;*&quot;));
+    &#125;
+&#125;
+</code></pre>
+<h3 id="按控制器设置"><a href="#按控制器设置" class="headerlink" title="按控制器设置"></a><strong>按控制器设置</strong></h3><pre><code>public static class WebApiConfig
+&#123;
+    public static void Register(HttpConfiguration config)
+    &#123;
+        // Web API 配置和服务
+        config.EnableCors();
+    &#125;
+&#125;
+</code></pre>
+<pre><code>[System.Web.Http.Cors.EnableCors(&quot;https://rocinn.github.io,http://localhost:4000&quot;, &quot;*&quot;, &quot;*&quot;)]
+public class CommonController : ApiController
+&#123;
+
+&#125;
+</code></pre>
+<h3 id="针对接口设置"><a href="#针对接口设置" class="headerlink" title="针对接口设置"></a><strong>针对接口设置</strong></h3><h4 id="方式1"><a href="#方式1" class="headerlink" title="方式1"></a>方式1</h4><pre><code>public static class WebApiConfig
+&#123;
+    public static void Register(HttpConfiguration config)
+    &#123;
+        // Web API 配置和服务
+        config.EnableCors();
+    &#125;
+&#125;
+</code></pre>
+<pre><code>public class CommonController : ApiController
+&#123;
+    [System.Web.Http.Cors.EnableCors(&quot;https://rocinn.github.io,http://localhost:4000&quot;, &quot;*&quot;, &quot;*&quot;)]
+    [HttpGet, Route(&quot;ip&quot;)]
+    public IHttpActionResult GetXXX()
+    &#123;
+        string ip = System.Web.HttpContext.Current.Request.UserHostAddress;
+
+        return Json(new Dictionary&lt;string, object&gt;() &#123; &#123; &quot;ip&quot;, ip &#125; &#125;);
+    &#125;
+&#125;
+</code></pre>
+<h4 id="方式2"><a href="#方式2" class="headerlink" title="方式2"></a>方式2</h4><pre><code>public class CommonController : ApiController
+&#123;
+    [HttpGet, Route(&quot;ip&quot;)]
+    public IHttpActionResult GetXXX()
+    &#123;
+        string ip = System.Web.HttpContext.Current.Request.UserHostAddress;
+
+        // 可以设置 *, 或者指定一个域名（只能指定一个）
+        System.Web.HttpContext.Current.Response.AddHeader(&quot;Access-Control-Allow-Origin&quot;, &quot;https://rocinn.github.io&quot;);
+
+        return Json(new Dictionary&lt;string, object&gt;() &#123; &#123; &quot;ip&quot;, ip &#125; &#125;);
+    &#125;
+&#125;
+</code></pre>
+
+        </div>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+  <div class="article-copyright hairline">
+    <p>
+      本作品采用  <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 (CC BY-NC-ND 4.0)</a> 进行许可。
+    </p>
+  </div>
+  
+
+    
+
+    
+<nav class="article-nav">
+  
+  
+    <a href="/2022/05/15/aboutme/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-caption">上一篇</div>
+      <div class="article-nav-title">关于博客主</div>
+    </a>
+  
+</nav>
+
+
+    <!-- <section class="share">
+        <div class="share-title">分享</div>
+        <a class="share-item" target="_blank"
+            href="https://twitter.com/share?text=.net c# webapi 设置允许跨域 - rocinn.site&url=https%3A%2F%2Frocinn.site%2F2022%2F05%2F20%2Fdotnetwebapicors%2F">
+            <box-icon type='logo' name='twitter'></box-icon>
+        </a>
+        <a class="share-item" target="_blank"
+            href="https://www.facebook.com/sharer.php?title=.net c# webapi 设置允许跨域 - rocinn.site&u=https%3A%2F%2Frocinn.site%2F2022%2F05%2F20%2Fdotnetwebapicors%2F">
+            <box-icon name='facebook-square' type='logo' ></box-icon>
+        </a>
+
+    </section> -->
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="comments">
+    <div class="giscus"></div>
+</section>
+<script src="https://giscus.app/client.js"
+    data-repo="rocinn/rocinn.github.io"
+    data-repo-id="R_kgDOHXLpeQ"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOHXLpec4CPL7b"
+    data-mapping="pathname"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-theme="light"
+    data-lang="zh-CN"
+    data-input-position="top"
+    crossorigin="anonymous"
+    async>
+</script>
+
+
+
+
+
+  <link rel="icon" href="https://rocin-hexo-blog.oss-cn-shanghai.aliyuncs.com/icon-r.png">
+
+
+
+</div>
+                </section>
+            </section>
+
+            
+            <aside class="sidebar sidebar-search-fix">
+                
+
+    <div class="search">
+    <div class="has-icon-right">
+        <input type="text" class="form-input" id="search" placeholder="SEARCH" autocomplete="off">
+        <div class="form-icon">
+            <box-icon name='search' color="#3c4859"></box-icon>
+        </div>
+    </div>
+    <div class="search-result" id="search-ps"></div>
+</div>
+
+
+<div class="widget" id="widget">
+    
+      
+  <div class="widget-wrap">
+    <div class="widget-inner">
+      <div class="toc post-toc-html"></div>
+    </div>
+  </div>
+
+    
+      
+
+    
+      
+  <div class="widget-wrap widget-tags">
+    <div class="widget-title"><span>Tags</span></div>
+    <div class="widget-inner">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">c#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cors/" rel="tag">cors</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webapi/" rel="tag">webapi</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-recent-posts">
+    <div class="widget-title"><span>Recent Posts</span></div>
+    <div class="widget-inner">
+      <ul>
+        
+          <li>
+            <a href="/2022/05/20/dotnetwebapicors/">.net c# webapi 设置允许跨域</a>
+          </li>
+        
+          <li>
+            <a href="/2022/05/15/aboutme/">关于博客主</a>
+          </li>
+        
+          <li>
+            <a href="/2022/05/13/hexo-build-blog-steps/">Hexo 搭建个人博客（主题 Aomori）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap widget-archive">
+    <div class="widget-title"><span>Archive</span></div>
+    <div class="widget-inner">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a></li></ul>
+    </div>
+  </div>
+
+
+    
+</div>
+
+<div id="backtop"><i class="icon icon-arrow-up"></i></div>
+            </aside>
+            
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="footer-wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3c4859" fill-opacity="1" d="M0,160L60,181.3C120,203,240,245,360,240C480,235,600,181,720,186.7C840,192,960,256,1080,261.3C1200,267,1320,213,1380,186.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+    </div>
+
+    <!-- Please do not remove this -->
+    <!-- 开源不易，请勿删除 -->
+    <div class="footer-wrap">
+        <div class="footer-inner"> 
+            rocinn.site &copy; 2022<br>
+            Powered By Hexo · Theme By <a href="https://linhong.me/" target="_blank">Aomori</a> · <a href="https://github.com/lh1me/hexo-theme-aomori" target="_blank">Github</a><br>
+            
+        </div>
+    </div>
+
+</footer>
+
+
+
+
+
+
+<script src="/dist/build.js?1651727875408.js"></script>
+
+
+<script src="/dist/custom.js?1651727875408.js"></script>
+
+
+
+<!-- 百度链接提交 -->
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 以下时访客统计 -->
+
+  <!-- // 获取IP -->
+  <!-- <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script> -->
+
+  <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+  <script src="https://unpkg.com/leancloud-storage@4.12.2/dist/av-min.js"></script>
+  <script>
+    var m_current_pathname = window.location.pathname;
+    // const AV = require('leancloud-storage');
+    AV.init({
+      appId: '1l6UjGL3qBqg9E7qtK1zdzY3-gzGzoHsz',
+      appKey: '07bxY5wtFB85iUzDMcqTElaz',
+      serverURL: 'https://1l6ujgl3.lc-cn-n1-shared.com'
+    });
+   
+    //新增访问次数
+    function addCount(Counter) {
+      // 页面（博客文章）中的信息：leancloud_visitors
+      //  data-flag-title为page.title
+      var $visitors = $(".leancloud_visitors");
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      // 只根据文章的url查询LeanCloud服务器中的数据
+      query.equalTo("post_url", m_current_pathname);
+      query.find().then(function(results){
+          if (results.length > 0) {//说明LeanCloud中已经记录了这篇文章
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("visited_times");// 将点击次数加1
+            counter.save().then(function(counter){
+                var newTimes = counter.get('visited_times');
+                $('.leancloud-visitors-count').text(newTimes+"阅读");
+              },
+              function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            );
+          } else {
+            // 执行这里，说明LeanCloud中还没有记录此文章
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("post_title", title);// 把文章标题
+            newcounter.set("post_url", m_current_pathname); // 文章url
+            newcounter.set("visited_times", 1); // 初始点击次数：1次
+            newcounter.save().then(function(newcounter){ // 上传到LeanCloud服务器中
+                var newTimes = newcounter.get('visited_times');
+                $('.leancloud-visitors-count').text(newTimes+"阅读");
+              },
+               function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            );
+          }
+        },
+         function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      );
+    }
+
+    //仅根据url和title查出当前访问次数，不做+1操作
+    function showCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      // 只根据文章的url查询LeanCloud服务器中的数据
+      query.equalTo("post_url", m_current_pathname);
+      query.find().then(function(results){
+          if (results.length > 0) {//说明LeanCloud中已经记录了这篇文章
+            var counter = results[0];
+            var newTimes = counter.get('visited_times');
+            $('.leancloud-visitors-count').text(newTimes+"阅读");
+          } else {
+            //如果表里没查到记录，那就是异常情况了
+            console.log('异常情况，不应该没记录的');
+          }
+        },
+        function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      );
+    }
+
+    //判断访客是否已访问过该文章，及访问时间，符合条件则增加一次访问次数
+    function judgeVisitor(ip, city) {
+    // console.log("ip", ip)
+      var Counter = AV.Object.extend("visited_times");
+      var Visitor = AV.Object.extend("visitors_record");
+
+      var $postInfo = $(".leancloud_visitors");
+      var query = new AV.Query(Visitor);
+
+      query.equalTo("visitor_ip", ip);
+      query.equalTo("post_url", m_current_pathname);
+      query.find().then(function(results){
+          if (results.length > 0) {
+            // console.log('该IP已访问过该文章');
+
+            var oldVisitor = results[0];
+
+            var lastTime = oldVisitor.updatedAt;
+            var curTime = new Date();
+
+            var timePassed = curTime.getTime() - lastTime.getTime();
+
+            if(timePassed > 5 * 60 * 1000) {
+              // console.log('距离该IP上一次访问该文章已超过了5分钟，更新访问记录，并增加访问次数');
+
+              addCount(Counter);
+
+              oldVisitor.fetchWhenSave(true);
+              oldVisitor.save(null, {
+                success: function(oldVisitor) { },
+                error: function(oldVisitor, error) {
+                  console.log('Failed to save visitor record, with error message: ' + error.message);
+                }
+              });
+            } else {
+              // console.log('这是该IP 1分钟内重复访问该文章，不更新访问记录，不增加访问次数');
+              showCount(Counter);
+            }
+          } else {
+            // console.log('该IP第一次访问该文章，保存新的访问记录，并增加访问次数');
+
+            addCount(Counter);
+
+            var newVisitor = new Visitor();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newVisitor.setACL(acl);
+            newVisitor.set("visitor_ip", ip);
+            newVisitor.set("visitor_city", city);
+            newVisitor.set("post_url", m_current_pathname);
+            newVisitor.save(null, { // 上传到LeanCloud服务器中
+              success: function(newVisitor) { },
+              error: function(newVisitor, error) {
+                console.log('Failed to create visitor record, with error message: ' + error.message);
+              }
+            });
+          }
+        },
+         function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+          addCount(Counter);
+        }
+      );
+    }
+
+    $(function() {
+      if ($('.leancloud_visitors').length == 1) {
+        // 文章页面，调用判断方法，对符合条件的访问增加访问次数
+
+        var ip;
+        var city;
+        var options = {
+          type: 'get',
+          //async: false, //jquery3中可以直接使用回调函数，不用再指定async
+          url: "https://yzj.suijitask.cn/ip"
+        };
+        $.ajax(options)
+        .done(function(data, textStatus, jqXHR) {
+          if(textStatus == "success") {
+            ip = data.cip;
+            city = data.cname;
+          }
+          judgeVisitor(ip, city)
+        });
+
+      }
+    });
+  </script>
+
+
+
+</body>
+
+</html>
