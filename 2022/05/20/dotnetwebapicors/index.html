@@ -164,7 +164,7 @@
             <section class="inner">
                 <section class="inner-main">
                     <div class="post">
-    <article id="post-cl3fumokj0001gcg4ai3ab5sd" class="article article-type-post" itemscope
+    <article id="post-cl3fv7kps0001ckg441cxgy09" class="article article-type-post" itemscope
     itemprop="blogPost">
 
     <div class="article-inner">
@@ -597,7 +597,7 @@ public class CommonController : ApiController
     }
 
     //判断访客是否已访问过该文章，及访问时间，符合条件则增加一次访问次数
-    function judgeVisitor(ip, city) {
+    function judgeVisitor(ip) {
     // console.log("ip", ip)
       var Counter = AV.Object.extend("visited_times");
       var Visitor = AV.Object.extend("visitors_record");
@@ -646,7 +646,6 @@ public class CommonController : ApiController
             acl.setPublicWriteAccess(true);
             newVisitor.setACL(acl);
             newVisitor.set("visitor_ip", ip);
-            newVisitor.set("visitor_city", city);
             newVisitor.set("post_url", m_current_pathname);
             newVisitor.save(null, { // 上传到LeanCloud服务器中
               success: function(newVisitor) { },
@@ -668,7 +667,6 @@ public class CommonController : ApiController
         // 文章页面，调用判断方法，对符合条件的访问增加访问次数
 
         var ip;
-        var city;
         var options = {
           type: 'get',
           //async: false, //jquery3中可以直接使用回调函数，不用再指定async
@@ -677,10 +675,9 @@ public class CommonController : ApiController
         $.ajax(options)
         .done(function(data, textStatus, jqXHR) {
           if(textStatus == "success") {
-            ip = data.cip;
-            city = data.cname;
+            ip = data.ip;
           }
-          judgeVisitor(ip, city)
+          judgeVisitor(ip)
         });
 
       }
